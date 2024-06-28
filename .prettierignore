@@ -1,0 +1,8 @@
+node_modules
+android
+build
+.vscode
+src/ignite/ignite.json
+package.json
+leo-wallet-window/node_modules
+leo-wallet-window/build

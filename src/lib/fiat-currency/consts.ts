@@ -1,0 +1,2 @@
+export const ALEO_MICROCREDITS_TO_CREDITS = 1_000_000
+export const ALEO_DECIMALS = 6

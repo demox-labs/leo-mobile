@@ -1,0 +1,63 @@
+{
+  "cli": {
+    "version": ">= 5.9.2"
+  },
+  "build": {
+    "development": {
+      "developmentClient": true,
+      "distribution": "internal",
+      "channel": "development",
+      "env": {
+        "APP_VARIANT": "development",
+        "SENTRY_DISABLE_AUTO_UPLOAD": "true"
+      },
+      "android": {
+        "buildType": "apk"
+      }
+    },
+    "staging": {
+      "channel": "staging",
+      "env": {
+        "APP_VARIANT": "staging"
+      },
+      "android": {
+        "buildType": "app-bundle"
+      }
+    },
+    "production": {
+      "android": {
+        "buildType": "app-bundle"
+      },
+      "channel": "production",
+      "env": {
+        "APP_VARIANT": "production"
+      }
+    }
+  },
+  "submit": {
+    "staging": {
+      "ios": {
+        "ascApiKeyIssuerId": "<ascApiKeyIssuerId>",
+        "ascAppId": "<ascAppId>",
+        "ascApiKeyPath": "./app-store-connect-key.json",
+        "ascApiKeyId": "<ascApiKeyId>"
+      },
+      "android": {
+        "serviceAccountKeyPath": "./services-api-key.json",
+        "track": "internal"
+      }
+    },
+    "production": {
+      "ios": {
+        "ascApiKeyIssuerId": "<ascApiKeyIssuerId>",
+        "ascAppId": "<ascAppId>",
+        "ascApiKeyPath": "./app-store-connect-key.json",
+        "ascApiKeyId": "<ascApiKeyId>"
+      },
+      "android": {
+        "serviceAccountKeyPath": "./services-api-key.json",
+        "track": "internal"
+      }
+    }
+  }
+}

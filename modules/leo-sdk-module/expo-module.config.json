@@ -1,0 +1,9 @@
+{
+  "platforms": ["ios", "android", "web"],
+  "ios": {
+    "modules": ["LeoSdkModule"]
+  },
+  "android": {
+    "modules": ["expo.modules.leosdkmodule.LeoSdkModule"]
+  }
+}
